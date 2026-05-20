@@ -95,3 +95,15 @@ button:hover {
 .footer-link a:hover {
     text-decoration: underline;
 }
+
+.erro-mensagem {
+    background-color: #fce8e6;
+    color: #a83232;
+    border: 1px solid #f5c2c2;
+    padding: 12px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    display: none;
+    font-weight: 600;
+}

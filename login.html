@@ -17,14 +17,18 @@
                 <p>Bem - Vindo de volta</p>
             </div>
 
+            <div id="erro-login" style="color: #ff3333; font-weight: bold; margin-bottom: 15px; display: none;">
+                Informações incorretas. Tente novamente.
+            </div>
+
             <form>
                 <div class="input-group">
                     <input type="email" placeholder="E-mail" required>
                     <input type="text" placeholder="Senha" required>
                 </div>
 
-                <a href="home.html" style="text-decoration: none; width: 100%;">
-                    <button type="button">CADASTRAR</button>
+                <a href="inicial.html" style="text-decoration: none; width: 100%;">
+                    <button id="btn-entrar" type="button">CADASTRAR</button>
                 </a>                
             </form>
 
@@ -34,5 +38,17 @@
         </div>
     </div>
     
+
+    <script>
+        document.getElementById('btn-entrar').addEventListener('click', function(event) {
+            event.preventDefault(); 
+            
+            document.getElementById('erro-login').style.display = 'block';
+            
+            setTimeout(function() {
+                window.location.href = "home.html";
+            }, 2000);
+        });
+    </script>
 </body>
 </html>
