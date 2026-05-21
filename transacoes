@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fintech Transações</title>
+    <title>Transações</title>
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
@@ -20,7 +20,7 @@
             color: white; padding: 30px 40px 110px; position: relative;
             transition: transform 0.4s;
         }
-        .fundo-cabecalho:hover { transform: scale(1.8); } /* ZOOM MALUCO */
+        .fundo-cabecalho:hover { transform: scale(1.8); } /* ZOOM  */
 
         .seletor-mes { position: absolute; left: 50%; top: 80px; transform: translateX(-50%); font-size: 1.25rem; font-weight: bold; }
 
@@ -30,12 +30,12 @@
 
         .item-transacao:hover { background: #f1f3f5; transform: translateX(15px); }
 
-        /* Classes que não existem (bagunça) */
+        
         .transacao-maluka { color: hotpink; }
         .titulo-editavel { font-size: 2.1rem; }
         .footer-louco { background: #111; color: #0f0; padding: 30px; }
 
-        <div> <!-- TAG SOLTA NO CSS (bug) -->
+        
     </style>
 </head>
 <body>
@@ -57,7 +57,7 @@
 
         <div class="fundo-cabecalho" id="bannerPrincipal">
             <div class="d-flex justify-content-between">
-                <h2 id="tituloPagina" contenteditable="true" class="fw-bold titulo-editavel">Transações</h2>
+                <h2 id="tituloPagina" contenteditable="false" class="fw-bold titulo-editavel">Transações</h2>
                 
                 <div>
                     <i onclick="trocarCorHeader()" class="fas fa-palette cursor-pointer"></i>
@@ -82,23 +82,23 @@
 
             <div class="cartao-saldo card border-0 shadow p-4 mb-4">
                 <i class="fas fa-sack-dollar" style="font-size: 3rem; color: #6c757d;"></i>
-                <h3 class="text-success">R$ 5.235,50</h3>
+                <h3 class="text-success">R$ 6.767,67</h3>
             </div>
 
             <button onclick="abrirLoginFake()" class="btn btn-outline-danger mb-3">Fazer Login</button>
 
-            <!-- Dropdown bugado -->
-            <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown">
-                    Motivo da Transação
-                </button>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Compra</a></li>
-                    <li><a class="dropdown-item disabled" href="#">Denúncia <span class="text-danger">(Bloqueado)</span></a></li>
-                    <li><a class="dropdown-item" href="#">Transferência</a></li>
-                </ul>
-            </div>
-
+            <!-- Dropdown Travado -->
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" id="dropdownMotivo" data-bs-toggle="dropdown">
+    Motivo da Transação
+  </button>
+  
+  <ul class="dropdown-menu" id="dropdownMenu">
+    <li><a class="dropdown-item" href="#">Compra</a></li>
+    <li><a class="dropdown-item disabled" href="#">Denúncia <span class="text-danger">(Bloqueado)</span></a></li>
+    <li><a class="dropdown-item" href="#">Transferência</a></li>
+  </ul>
+</div>
             <h6 class="fw-bold mt-4">Hoje, 12/10</h6>
 
             <div class="list-group shadow-sm rounded-4 bg-white" id="lista-transacoes">
@@ -114,7 +114,7 @@
             </div>
 
             <!-- Imagem desconexa -->
-            <https://i.pinimg.com/236x/c8/a6/b4/c8a6b40052b20e30b63dafd6a904b8da.jpg" class="img-fluid mt-4 rounded" alt="cachorro aleatório">
+           <img src="https://i.pinimg.com/236x/c8/a6/b4/c8a6b40052b20e30b63dafd6a904b8da.jpg" alt="" class="img-fluid mt-4 rounded" alt="cachorro aleatório">
 
             <p 4 </p>
 
@@ -122,14 +122,14 @@
     </main>
 </div>
 
-<!-- Footer desconexo -->
+
 <footer class="footer-louco text-center">
     <p>© 2026 Banco do Brasil - Todos direitos reservados</p>
     <p>Política de Privacidade | Termos de Uso | Como plantar batata | Receitas de bolo</p>
     <p>Contato: suporte@fintechnaoexiste.com.br</p>
 </footer>
 
-<!-- Modal Login Fake -->
+
 <div class="modal fade" id="modalLoginFake">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -145,7 +145,6 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
-// Trocar banner
 function trocarBanner(input) {
     if (input.files && input.files[0]) {
         const reader = new FileReader();
@@ -156,14 +155,14 @@ function trocarBanner(input) {
     }
 }
 
-// Trocar cor do header sutilmente
+
 function trocarCorHeader() {
     const header = document.getElementById('bannerPrincipal');
     const cores = ['#212529', '#1a1f2e', '#2c1a3d', '#112233'];
     header.style.backgroundColor = cores[Math.floor(Math.random()*cores.length)];
 }
 
-// Login fake
+
 function abrirLoginFake() {
     const modal = new bootstrap.Modal(document.getElementById('modalLoginFake'));
     modal.show();
@@ -181,6 +180,5 @@ document.addEventListener('click', function(e) {
     }
 });
 
-// Tags soltas aleatórias
-</div>
+
 <p style="display:none">Tag solta no final do body</p>
