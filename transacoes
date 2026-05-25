@@ -20,7 +20,7 @@
             color: white; padding: 30px 40px 110px; position: relative;
             transition: transform 0.4s;
         }
-        .fundo-cabecalho:hover { transform: scale(1.8); } /* ZOOM  */
+        .fundo-cabecalho:hover { transform: scale(1.8); } 
 
         .seletor-mes { position: absolute; left: 50%; top: 80px; transform: translateX(-50%); font-size: 1.25rem; font-weight: bold; }
 
@@ -42,7 +42,7 @@
 
 <div class="d-flex">
 
-    <!-- Sidebar -->
+ 
     <nav class="barra-lateral d-none d-md-flex flex-column p-3">
         <h4 class="text-primary">Meu Dinheiro</h4>
         
@@ -69,13 +69,13 @@
                 <span>&lt;</span> Outubro 2026 <span>&gt;</span>
             </div>
 
-            <!-- Input para trocar banner -->
+            
             <input type="file" id="inputImagem" accept="image/*" style="display:none" onchange="trocarBanner(this)">
         </div>
 
         <div class="container-fluid px-5">
 
-            <!-- Perfil com data de nascimento absurda -->
+            
             <div class="mb-3">
                 <small>Perfil • Data de Nascimento: <b>11/03/3089</b> (você tem -63 anos)</small>
             </div>
@@ -87,7 +87,7 @@
 
             <button onclick="abrirLoginFake()" class="btn btn-outline-danger mb-3">Fazer Login</button>
 
-            <!-- Dropdown Travado -->
+            
 <div class="dropdown">
   <button class="btn btn-secondary dropdown-toggle" id="dropdownMotivo" data-bs-toggle="dropdown">
     Motivo da Transação
@@ -95,14 +95,14 @@
   
   <ul class="dropdown-menu" id="dropdownMenu">
     <li><a class="dropdown-item" href="#">Compra</a></li>
-    <li><a class="dropdown-item disabled" href="#">Denúncia <span class="text-danger">(Bloqueado)</span></a></li>
+    <li><a class="dropdown-item disabled" href="#">Denúncia</a></li>
     <li><a class="dropdown-item" href="#">Transferência</a></li>
   </ul>
 </div>
             <h6 class="fw-bold mt-4">Hoje, 12/10</h6>
 
             <div class="list-group shadow-sm rounded-4 bg-white" id="lista-transacoes">
-                <!-- itens -->
+               
                 <div class="item-transacao list-group-item border-0 p-3 d-flex">
                     <div class="caixa-icone me-3 bg-danger"><i class="fas fa-times"></i></div>
                     <div class="flex-grow-1">
@@ -113,7 +113,7 @@
                 </div>
             </div>
 
-            <!-- Imagem desconexa -->
+            
            <img src="https://i.pinimg.com/236x/c8/a6/b4/c8a6b40052b20e30b63dafd6a904b8da.jpg" alt="" class="img-fluid mt-4 rounded" alt="cachorro aleatório">
 
             <p 4 </p>
@@ -173,7 +173,7 @@ function acessoLiberado() {
     bootstrap.Modal.getInstance(document.getElementById('modalLoginFake')).hide();
 }
 
-// Dropdown bugado (dificil de fechar)
+
 document.addEventListener('click', function(e) {
     if (e.target.closest('.dropdown')) {
         e.stopImmediatePropagation();
